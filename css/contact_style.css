@@ -1,0 +1,114 @@
+/* header */
+.contact-header{
+  margin-top: 110px;
+}
+
+.display-4{
+  color: #00ffd5;
+  font-weight: bold;
+}
+
+/* form */
+.contact-form-box {
+  background-color: rgb(26, 26, 26);
+  box-shadow: rgba(0, 255, 213, 0.05) 0px 0px 20px;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 15px;
+  margin: auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  background-color: #0f0f0f;
+  border: 1px solid #444;
+  padding: 12px 15px;
+  margin-top: 8px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form button[type="submit"] {
+  background: #00ffd5;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #000;
+  color: #00ffd5;
+  transform: scale(1.05);
+}
+
+/* info */
+
+.icon-circle{
+  color: #00937b;
+  background-color: #ffffff;
+  background-size: cover;
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.icon-circle {
+  position: relative;
+  top: 5%;
+  right: 98%;
+}
+
+
+.row .text-primary1 {
+  position: relative;
+  top: 20px;
+  right: 52%;
+}
+
+.row .text-primary2 {
+  position: relative;
+  top: 20px;
+  right: 53%;
+}
+
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+
+
+}
+  
+
+@media (max-width: 768px) {
+  .row .text-primary1 {
+    position: relative;
+    top: 15px;
+    right: 5%;
+  }
+
+  .row .text-primary2 {
+    position: relative;
+    top: 15px;
+    right: 5%;
+
+  }
+  
+  .icon-circle {
+    position: relative;
+    top: 5%;
+    right: 50%
+  }
+
+
+}

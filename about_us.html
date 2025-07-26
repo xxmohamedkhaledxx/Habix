@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habix | About Us</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/habix.png" type="image/png">
+  <link rel="stylesheet" href="css/about_style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Habix Logo" width="120" height="50"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="homeNav" href="index.html">الصفحة الرئيسية</a></li>
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="aboutNav" href="about_us.html">عنّا</a></li>
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="servicesNav" href="services.html">الخدمات</a></li>
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="contactNav" href="contact_us.html">تواصل معنا</a></li>
+        </ul>
+        <a class="btn btn-creative ms-3" href="https://wa.me/+201500740391" target="_blank" style="font-size: 15px;" data-key="startProject">ابدأ مشروعك</a>
+      </div>
+    </div>
+  </nav>
+  <button class="btn btn-outline-light lang-toggle" onclick="toggleLanguage()">English</button>
+      <!-- من نحن -->
+  <header class="text-center about-header bg-dark">
+    <div class="container">
+      <h1 class="display-4" data-key="aboutHeader">من نحن</h1>
+      <p class="lead" data-key="aboutIntro"></p>
+    </div>
+  </header>
+  <main>
+
+    <!-- القيم -->
+    <section class="about-section" id="values">
+      <div class="container">
+        <h2 class="section-title" data-key="valuesTitle">قيمنا</h2>
+        <ul class="values-list">
+          <li data-key="value1">الإبداع</li>
+          <li data-key="value2">الجودة</li>
+          <li data-key="value3">الاحترافية</li>
+          <li data-key="value4">الشفافية</li>
+        </ul>
+      </div>
+    </section>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- شركاؤنا 
+    <section class="about-section bg-dark" id="partners">
+      <div class="container">
+        <h2 class="section-title" data-key="partnersTitle">شركاؤنا</h2>
+        <div class="row text-center">
+          <div class="col-md-3 col-6 mb-4">
+            <img src="img/habix.png" alt="شريك" class="partner-logo" />
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <img src="img/habix.png" alt="شريك" class="partner-logo" />
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <img src="img/habix.png" alt="شريك" class="partner-logo" />
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <img src="img/habix.png" alt="شريك" class="partner-logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+      -->
+    <!-- لماذا نحن -->
+    <section class="about-section bg-dark" id="why-us">
+      <div class="container">
+        <h2 class="section-title" data-key="whyUsTitle">لماذا نحن؟</h2>
+        <p class="section-desc" data-key="whyUsText">
+          نمتلك الخبرة، والإبداع، والدقة في التنفيذ. نُحول أفكارك إلى واقع ملموس يترك أثراً لا يُنسى.
+        </p>
+      </div>
+    </section>
+
+    <!-- عملاؤنا
+
+    <section class="py-5 ">
+    <div class="container text-center">
+      <h2 class="section-title" data-key="OurCus">عملاؤنا</h2>
+      <div class="clients-logos d-flex flex-wrap justify-content-center">
+        <img src="img/ashraf.jpg" alt="عميل 1" data-bs-toggle="modal" data-bs-target="#clientModal1">
+        <img src="img/abdo2xd.jpg" alt="عميل 2" data-bs-toggle="modal" data-bs-target="#clientModal2">
+        <img src="img/kemoo.jpg" alt="عميل 3" data-bs-toggle="modal" data-bs-target="#clientModal3">
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade " id="clientModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" data-key="Cus1">د.أشرف العسال</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <a href="https://www.youtube.com/@DrAshrafElassal" target="_blank" data-key="Cus1Info3">قناة اليوتيوب </a><br>
+          <a href="https://www.instagram.com/byashrafelassal/" target="_blank" data-key="Cus1Info4">الأنستاجرام</a><br>
+          <a href="https://www.facebook.com/Dr.AshrafElassal/" target="_blank" data-key="Cus1Info5">فيسبوك</a><br>
+          <a href="https://www.tiktok.com/@dr.ashrafelassal?lang=en" target="_blank" data-key="Cus1Info6">تيك توك </a><br>
+          <a href="https://ashrafelassal.com/" target="_blank" data-key="Cus1Info7">الموقع الرسمي</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="clientModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" data-key="Cus2">مؤسسة Yousef Hatem</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <a href="https://www.youtube.com/@Abdo2xd" target="_blank" data-key="Cus1Info3">قناة اليوتيوب </a><br>
+          <a href="https://www.instagram.com/abdo2xd/" target="_blank" data-key="Cus1Info4">الأنستاجرام</a><br>
+          <a href="https://www.facebook.com/3bdo2xd/?_rdc=2&_rdr#" target="_blank" data-key="Cus1Info5">فيسبوك</a><br>
+          <a href="https://www.tiktok.com/@abdo2xd" target="_blank" data-key="Cus1Info6">تيك توك </a><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="clientModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" data-key="Cus3">مؤسسة Abdo Khaled</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <a href="https://www.youtube.com/@KARIMOVIC.10" target="_blank" data-key="Cus1Info3">قناة اليوتيوب </a><br>
+          <a href="https://www.instagram.com/karimovic.10/" target="_blank" data-key="Cus1Info4">الأنستاجرام</a><br>
+          <a href="https://www.facebook.com/karimovic.100/" target="_blank" data-key="Cus1Info5">فيسبوك</a><br>
+          <a href="https://www.tiktok.com/@kariimoviic" target="_blank" data-key="Cus1Info6">تيك توك </a><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+-->
+    <!-- آراء العملاء -->
+    <section class="about-section " id="testimonials">
+      <div class="container">
+        <h2 class="section-title" data-key="testimonialsTitle">آراء العملاء</h2>
+        <div class="testimonial">
+          <p data-key="testimonial1">"الصراحة التعامل كان راقـي لأبعد حد، شغلهم دقيق وسريع وما يحتاج أتابع معهم كثير. وفّروا علينا وقت وجهد كبير، أنصح فيهم وبقوة."</p>
+          <span data-key="client1"><p><img src="https://flagcdn.com/32x24/sa.png" alt="السعودية"></p></span>
+        </div>
+        <div class="testimonial">
+          <p data-key="testimonial1">"طلبت تعديل على مخطط قديم وكان الرد جداً سريع، والأفكار اللي أضافوها رفعت قيمة المشروع فعلاً. ما شاء الله عليهم فاهمين الشغل ومتقنين."</p>
+          <span data-key="client1"><p><img src="https://flagcdn.com/32x24/kw.png" alt="الكويت"></p></span>
+        </div>
+        <div class="testimonial">
+          <p data-key="testimonial1">"اللي يميزهم إنهم يجمعون بين الذوق الهندسي والإلتزام. خلصوا كل شيء قبل الموعد وبجودة عالية. بدون مجاملة، نادر تلقى هالمستوى."</p>
+          <span data-key="client1"><p><img src="https://flagcdn.com/32x24/qa.png" alt="قطر"></p></span>
+        </div>
+          <div class="testimonial">
+          <p data-key="testimonial1">"Professional, fast, and super easy to work with. They understood exactly what I needed and delivered even better than I expected. Highly recommend!"</p>
+          <span data-key="client1"><p><img src="https://flagcdn.com/32x24/us.png" alt="USA"></p></span>
+        </div>
+        <div class="testimonial">
+          <p data-key="testimonial1">"Great communication and attention to detail. The project was completed on time with excellent quality. I’ll definitely work with them again!"</p>
+          <span data-key="client1"><p><img src="https://flagcdn.com/32x24/gb.png" alt="england"></p></span>
+        </div>
+        <div class="testimonial">
+          <p data-key="testimonial1">"بجد ناس محترمة وشغلهم نظيف، فاهمين هما بيعملوا إيه وبيسلموا في المعاد. أول مرة أتعامل معاهم ومش هتكون الأخيرة إن شاء الله."</p>
+          <span data-key="client1"><p><img src="https://flagcdn.com/32x24/eg.png" alt="مصر"></p></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- انضم إلينا -->
+    <section class="about-section bg-dark" id="join-us">
+      <div class="container text-center">
+        <h2 class="section-title" data-key="joinUsTitle">انضم إلى فريقنا</h2>
+        <p class="section-desc" data-key="joinUsText">هل أنت موهوب؟ نحن نبحث دائمًا عن أشخاص مبدعين. أرسل سيرتك الذاتية الآن.</p>
+        <a href="mailto:habix.company@gmail.com" class="btn btn-creative" data-key="sendCV">أرسل سيرتك الذاتية</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4">
+    <p data-key="aboutRights">&copy; 2025 Habix. جميع الحقوق محفوظة.</p>
+  </footer>
+  <script>
+  const translations = {
+    en: {
+      homeNav:"Home",
+      aboutNav: "About Us",
+      servicesNav: "Services",
+      contactNav: "Contact Us",
+      startProject: "Start Your Project",
+      aboutHeader: " Who Are WE ",
+      aboutIntro: " At Habix, we transform creative visions into compelling visual narratives. Specializing in high-quality video production, animation, and digital content creation, we bring stories to life with innovative techniques and cutting-edge technology. Our team of passionate professionals is dedicated to crafting powerful, memorable experiences that resonate with audiences across all platforms. From concept to final cut, we partner with you to deliver exceptional media that captivates and engages. Let us be the storytellers behind your brand's success.---Feel free to customize this description with your company's name and specific services!",
+      whoWeAreTitle: " Who Are WE",
+      whoWeAreText: " We are a creative team specialized in delivering integrated solutions in graphic design, motion graphics, video production, and presentation design. We focus on quality and innovation to ensure every project makes a real impact.",
+      visionTitle: "Our Vision",
+      visionText: "To be pioneers in the visual and creative content industry in the Arab world by delivering work that inspires and makes an impact",
+      valuesTitle: "Our Values",
+      value1: "Creativity",
+      value2: "Quality",
+      value3: "Professionalism",
+      value4: "Transparency",
+      teamTitle: "Our Team",
+      memberName1: "Abdo Khalecd",
+      memberRole1: "Team Member",
+      memberName2: "Yousef Hatem",
+      memberRole2: "Team Member",
+      memberName3: "Mohamed Khaled",
+      memberRole3: "SEO",
+      partnersTitle: "Our Partners",
+      whyUsTitle: "Why Us?",
+      whyUsText: "We have the experience, creativity, and precision in execution. We turn your ideas into a tangible reality that leaves a lasting impression",
+      OurCus: "Our Clients",
+      Cus1: "Dr. Ashraf El-Asal",
+      Cus1Info3: "YouTube channel",
+      Cus1Info4:"Instagram",
+      Cus1Info5:"FaceBook",
+      Cus1Info6:"TikTok",
+      Cus1Info7:"Official Website",
+      Cus2: "Abdo 2xd",
+      Cus2Info3: "YouTube channel",
+      Cus3: "كريموفيتش | KARIMOVIC",
+      Cus3Info3: "YouTube channel",
+      testimonialsTitle: "Client Testimonials",
+      joinUsTitle: "Join Our Team",
+      joinUsText: "Are you talented? We're always looking for creative individuals. Send us your CV now.",
+      sendCV: "Send Your CV",
+      aboutRights: "© 2025 Habix. All rights reserved.",
+    },
+    ar: {
+      homeNav:"الصفحة الرئيسية",
+      aboutNav: "عنّا",
+      servicesNav: "الخدمات",
+      contactNav: "تواصل معنا",
+      startProject: "ابدأ مشروعك",
+      aboutHeader: " من نحن ",
+      aboutIntro: "في Habix، نحوّل الرؤى الإبداعية إلى سرد بصري جذّاب. نحن متخصصون في إنتاج الفيديو عالي الجودة، والأنيميشن، وإنشاء المحتوى الرقمي، حيث نُحيي القصص باستخدام تقنيات مبتكرة وأحدث التكنولوجيا.فريقنا المتحمّس من المحترفين ملتزم بصناعة تجارب قوية ولا تُنسى تترك أثرًا في جمهورك على جميع المنصات.من الفكرة إلى النسخة النهائية، نعمل معك كشركاء لنقدّم محتوى إعلامي استثنائي يشد الانتباه ويحقق التفاعل.دعنا نكون رواة القصة وراء نجاح علامتك التجارية.",
+      whoWeAreTitle: "من نحن",
+      whoWeAreText: "نحن فريق إبداعي متخصص في تقديم حلول متكاملة في التصميم الجرافيكي، الموشن جرافيك، إنتاج الفيديو، وتصميم العروض التقديمية. نركز على الجودة والابتكار لنجعل كل مشروع يحقق تأثير حقيقي. ",
+      visionTitle: "رؤيتنا",
+      visionText: "أن نكون من الرواد في صناعة المحتوى البصري والإبداعي في العالم العربي، من خلال تقديم أعمال تُلهم وتؤثر",
+      valuesTitle: "قيمنا",
+      value1: "الإبداع",
+      value2: "الجودة",
+      value3: "الاحترافية",
+      value4: "الشفافية",
+      teamTitle: "فريق العمل",
+      memberName1: "عبدالرحمن خالد",
+      memberRole1: "عامل",
+      memberName2: "يوسف حاتم",
+      memberRole2: "عامل",
+      memberName3: "محمد خالد",
+      memberRole3: "المدير",
+      partnersTitle: "شركاؤنا",
+      whyUsTitle: "لماذا نحن؟",
+      whyUsText: "نمتلك الخبرة، والإبداع، والدقة في التنفيذ. نُحول أفكارك إلى واقع ملموس يترك أثراً لا يُنسى",
+      OurCus:"عملاؤنا",
+      Cus1:"د.أشرف العسال",
+      Cus1Info3:"قناة اليوتيوب",
+      Cus1Info4:"الأنستاجرام",
+      Cus1Info5:"فيسبوك",
+      Cus1Info6:"تيك توك",
+      Cus1Info7:"الموقع الرسمي",
+      Cus2:"Abdo 2xd",
+      Cus2Info3:"قناة اليوتيوب",
+      Cus3:"كريموفيتش | KARIMOVIC",
+      Cus3Info3:"قناة اليوتيوب",
+      testimonialsTitle: "آراء العملاء",
+      joinUsTitle: "انضم إلى فريقنا",
+      joinUsText: "هل أنت موهوب؟ نحن نبحث دائمًا عن أشخاص مبدعين. أرسل سيرتك الذاتية الآن.",
+      sendCV: "أرسل سيرتك الذاتية",
+      aboutRights: "&copy; 2025 Habix. جميع الحقوق محفوظة.",
+    }
+  };
+
+  let currentLang = localStorage.getItem('lang') || 'ar'; // التحميل التلقائي للغة
+
+  function applyTranslation() {
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (translations[currentLang][key]) {
+        el.textContent = translations[currentLang][key];
+      }
+    });
+
+    document.documentElement.lang = currentLang;
+
+    const langBtn = document.querySelector('.lang-toggle');
+    if (langBtn) {
+      langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+    }
+  }
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    localStorage.setItem('lang', currentLang);
+    applyTranslation();
+  }
+
+  // تشغيل الترجمة عند تحميل الصفحة
+  window.addEventListener('DOMContentLoaded', applyTranslation);
+</script>
+<script>
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    });
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+    });
+  });
+</script>
+
+</body>
+
+</html>

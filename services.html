@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habix | خدماتنا</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/habix.png" type="image/png">
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Habix Logo" width="120" height="50"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="homeNav" href="index.html">الصفحة الرئيسية</a></li>
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="aboutNav" href="about_us.html">عنّا</a></li>
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="servicesNav" href="services.html">الخدمات</a></li>
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="contactNav" href="contact_us.html">تواصل معنا</a></li>
+        </ul>
+        <a class="btn btn-creative ms-3" href="https://wa.me/+201500740391" target="_blank" style="font-size: 15px;" data-key="startProject">ابدأ مشروعك</a>
+      </div>
+    </div>
+  </nav>
+  <button class="btn btn-outline-light lang-toggle" onclick="toggleLanguage()">English</button>
+
+
+  <header class=" fullscreen-header text-center py-5">
+    <div class="container">
+      <h1 class="display-4 text-light" data-key="SerHeader">خدماتنا</h1>
+      <p class="lead text-muted" data-key="SerIntro">نقدّم لك مجموعة متكاملة من الخدمات الإبداعية لتنمية مشروعك وتحقيق رؤيتك.</p>
+    </div>
+  </header>
+
+  <section class="container py-5">
+    <h2 class="section-title" data-key="SerList">قائمة الخدمات</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-box lrnbx text-center">
+          <i class="fas fa-video fa-2x mb-3"></i>
+          <h4 data-key="VidEdit">مونتاج فيديو</h4>
+          <p data-key="VidEditTitle">تحرير احترافي للفيديوهات بأسلوب عصري وسينمائي يعبّر عن علامتك التجارية.</p>
+          <a class="btn btn-service mt-3"  alt="مونتاج فيديو " data-bs-toggle="modal" data-bs-target="#videdit" data-key="KnowMore">اعرف المزيد</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box text-center">
+          <i class="fas fa-pen-nib fa-2x mb-3"></i>
+          <h4 data-key="Graphic">تصميم جرافيك</h4>
+          <p class="pp1" data-key="GraphicTitle">تصميم منشورات، شعارات، بوسترات، بروفايلات شركات بأسلوب جذاب واحترافي.</p>
+        <!-- <a class="btn btn-service mt-3"  alt="تصميم جرافيك" data-bs-toggle="modal" data-bs-target="#graphic" data-key="KnowMore">اعرف المزيد</a> -->
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box lrnbx text-center">
+          <i class="fas fa-film fa-2x mb-3"></i>
+          <h4 data-key="Motion">موشن جرافيك</h4>
+          <p data-key="MotionTitle">فيديوهات أنيميشن توضح خدمتك أو منتجك بأسلوب مبسّط ومؤثر.</p>
+          <a class="btn btn-service mt-3"  alt="موشن جرافيك" data-bs-toggle="modal" data-bs-target="#motion" data-key="KnowMore">اعرف المزيد</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box  text-center">
+          <i class="fas fa-photo-video fa-2x mb-3"></i>
+          <h4 data-key="VidProduction">إنتاج فيديو</h4>
+          <p class="pp1" data-key="VidProductionTitle">تصوير احترافي للمشاريع والفعاليات مع مونتاج عالي الجودة.</p>
+         <!-- <a class="btn btn-service mt-3"  alt="إنتاج فيديو" data-bs-toggle="modal" data-bs-target="#" data-key="KnowMore">اعرف المزيد</a> -->
+        </div>
+      </div>
+      <!--  
+      <div class="col-md-4">
+        <div class="service-box text-center">
+          <i class="fas fa-slideshare fa-2x mb-3"></i>
+          <h4 data-key="presentation">عروض تقديمية</h4>
+          <p class="pp1" data-key="presentationTitle">PowerPoint وKeynote بتصاميم مخصصة تسهّل إيصال فكرتك باحتراف.</p>
+          <a class="btn btn-service mt-3"  alt="عروض تقديمية" data-bs-toggle="modal" data-bs-target="#" data-key="KnowMore">اعرف المزيد</a>
+        </div>
+      </div>
+       -->
+      <div class="col-md-4 voiceover1">
+        <div class="service-box text-center voiceover1">
+          <i class="fas fa-bullhorn fa-2x mb-3 voiceover1"></i>
+          <h4 data-key="SocialMedia">خدمات سوشيال ميديا</h4>
+          <p data-key="SocialMediaTitle">إدارة المحتوى، الحملات الإعلانية، وتصميم المنشورات لمنصات التواصل الاجتماعي. </p>
+         <!-- <a class="btn btn-service mt-3"  alt="خدمات سوشيال ميديا" data-bs-toggle="modal" data-bs-target="#" data-key="KnowMore">اعرف المزيد</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+    <!--بورتوفوليو-->
+    <div class="modal fade" id="videdit" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" data-key="VidEditPort">مونتاج فيديو</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p data-key="SomeVidEdit">بعض اعمال المونتاج </p>
+          <p data-key="OurJob"> أعمالنا تتحدث عنّا... هل ترغب في عمل مماثل؟ تواصل معنا الآن. </p>
+          <video src="img/edit1.mp4"  class="smallpic" controls></video>
+          <video src="img/edit2.mp4"  class="smallpic" controls></video>
+          <video src="img/edit3.mp4"  class="smallpic" controls></video>
+          <video src="img/edit4.mp4"  class="smallpic" controls></video>
+          <video src="img/edit5.mp4"  class="smallpic" controls></video>
+          <video src="img/edit6.mp4"  class="smallpic" controls></video>
+          <video src="img/edit7.mp4"  class="smallpic" controls></video>
+          <video src="img/edit8.mp4"  class="smallpic" controls></video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+    <div class="modal fade" id="graphic" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" data-key="GraphicPort">تصميم جرافيك </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p data-key="SomeGraphic">بعض اعمال تصميم الجرافيك </p>
+          <p data-key="OurJob"> أعمالنا تتحدث عنّا... هل ترغب في عمل مماثل؟ تواصل معنا الآن. </p>
+          <video src="img/graphic1.mp4"  class="smallpic" controls></video>
+          <video src="img/graphic2.mp4"  class="smallpic" controls></video>
+          <video src="img/graphic3.mp4"  class="smallpic" controls></video>
+          <video src="img/graphic4.mp4"  class="smallpic" controls></video>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+    <div class="modal fade" id="motion" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" data-key="MotionPort">موشن جرافيك</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p data-key="SomeMotion">بعض اعمال الموشن جرافيك </p>
+          <p data-key="OurJob"> أعمالنا تتحدث عنّا... هل ترغب في عمل مماثل؟ تواصل معنا الآن. </p>
+          <video src="img/motion1.mp4"  class="smallpic" controls></video>
+          <video src="img/motion2.mp4"  class="smallpic" controls></video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container call2act">
+      <h2 data-key="Ready">جاهز تبدأ مشروعك معنا؟</h2>
+      <a href="https://wa.me/+201500740391" target="_blank" data-key="startProject" >ابدأ مشروعك الآن</a>
+    </div>
+  </section>
+    <footer>
+    <p data-key="rights">&copy; 2025 Habix. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    const videdit = document.getElementById('videdit');
+
+    videdit.addEventListener('hidden.bs.modal', function () {
+        const videos = videdit.querySelectorAll('video');
+        videos.forEach(video => {
+        video.pause();        // يوقف الفيديو
+        video.currentTime = 0; // يرجّعه لأول ثانية
+        });
+    });
+  </script>
+  <script>
+    const graphic = document.getElementById('graphic');
+
+    graphic.addEventListener('hidden.bs.modal', function () {
+        const videos = graphic.querySelectorAll('video');
+        videos.forEach(video => {
+        video.pause();        // يوقف الفيديو
+        video.currentTime = 0; // يرجّعه لأول ثانية
+        });
+    });
+  </script>
+  <script>
+    const motion = document.getElementById('motion');
+
+    motion.addEventListener('hidden.bs.modal', function () {
+        const videos = motion.querySelectorAll('video');
+        videos.forEach(video => {
+        video.pause();        // يوقف الفيديو
+        video.currentTime = 0; // يرجّعه لأول ثانية
+        });
+    });
+  </script>
+
+<script>
+  const translations = {
+    en: {
+      homeNav:"Home",
+      aboutNav: "About Us",
+      servicesNav: "Services",
+      contactNav: "Contact Us",
+      startProject: "Start Your Project",
+
+      SerHeader: "Our Services",
+      SerIntro: "We offer you a complete range of creative services to grow your project and achieve your vision.",
+      SerList: "Services List",
+      VidEdit: "Video Editing",
+      VidEditTitle: "Professional video editing with a modern and cinematic style that reflects your brand.",
+      KnowMore: "Learn More",
+      Graphic: "Graphic Design",
+      GraphicTitle: "Design of posts, logos, and company profiles with an attractive and professional style.",
+      Motion: "Motion Graphics",
+      MotionTitle: "Animated videos that explain your service or product in a simple and impactful way.",
+      VidProduction: "Page Management",
+      VidProductionTitle: "We manage your pages with expertise and build real engagement with your audience.",
+      presentation: "Presentations",
+      presentationTitle: "Custom PowerPoint and Keynote designs that help deliver your ideas professionally.",
+      SocialMedia: "Voice Over",
+      SocialMediaTitle: "We deliver your message with a professional voice that captivates and resonates.",
+      VidEditPort: "Video Editing",
+      SomeVidEdit: "Some of our video editing work",
+      OurJob: "Our work speaks for itself... Want something similar? Contact us now.",
+      GraphicPort: "Graphic Design",
+      SomeGraphic: "Some of our graphic design work",
+      MotionPort: "Motion Graphics",
+      SomeMotion: "Some of our motion graphics work",
+      CusReview: "Customer Reviews",
+      Review1: "'The service was amazing and the result exceeded expectations. A cooperative and professional team.'",
+      CusName1: "- Mohamed Khaled",
+      Review2: "'Habix brought my idea to life in an impressive visual way. Highly recommended!'",
+      CusName2: "- Yousef Hatem",
+      OurCus: "Our Clients",
+      Cus1: "Mohamed Khaled Company",
+      Cus1Info1: "Subscribers: 100",
+      Cus1Info2: "Project details: Full advertising campaign design for 3 months.",
+      Cus1Info3: "Official Website",
+      Cus2: "Yousef Hatem Foundation",
+      Cus2Info1: "Subscribers: 200",
+      Cus2Info2: "Project details: Motion graphics video production for a tech service.",
+      Cus2Info3: "Facebook Page",
+      Cus3: "Abdo Khaled Foundation",
+      Cus3Info1: "Subscribers: 300",
+      Cus3Info2: "Project details: Created 100 YouTube videos.",
+      Cus3Info3: "TikTok Page",
+      Cus4: "Medo Foundation",
+      Cus4Info1: "Subscribers: 400",
+      Cus4Info2: "Project details: Content management, ad campaigns, and post design for social media platforms.",
+      Cus4Info3: "YouTube Page",
+      Cus5: "Abdo Foundation",
+      Cus5Info1: "Subscribers: 500",
+      Cus5Info2: "Project details: Motion graphics video production for a tech service.",
+      Cus5Info3: "Twitter Page",
+      Ready: "? Ready to start your project with us",
+      rights: " 2025 Habix. All rights reserved.",
+
+    },
+    ar: {
+      homeNav:"الصفحة الرئيسية",
+      aboutNav: "عنّا",
+      servicesNav: "الخدمات",
+      contactNav: "تواصل معنا",
+      startProject: "ابدأ مشروعك",
+
+      SerHeader: "خدماتنا",
+      SerIntro: "نقدّم لك مجموعة متكاملة من الخدمات الإبداعية لتنمية مشروعك وتحقيق رؤيتك.",
+      SerList: "قائمة الخدمات",
+      VidEdit: "مونتاج فيديو",
+      VidEditTitle: "تحرير احترافي للفيديوهات بأسلوب عصري وسينمائي يعبّر عن علامتك التجارية.",
+      KnowMore:"اعرف المزيد",
+      Graphic:"تصميم جرافيك",
+      GraphicTitle:"تصميم منشورات، شعارات، بروفايلات شركات بأسلوب جذاب واحترافي.",
+      Motion:"موشن جرافيك",
+      MotionTitle:"فيديوهات أنيميشن توضح خدمتك أو منتجك بأسلوب مبسّط ومؤثر. ",
+      VidProduction:" إدارة الصفحات",
+      VidProductionTitle:"ندير صفحاتك باحتراف ونبني تفاعل حقيقي مع جمهورك.",
+      presentation:"عروض تقديمية",
+      presentationTitle:"PowerPoint وKeynote بتصاميم مخصصة تسهّل إيصال فكرتك باحتراف.",
+      SocialMedia:"التعليق الصوتي",
+      SocialMediaTitle:"نوصل رسالتك بصوت احترافي يجذب الانتباه ويترك أثرًا",
+      VidEditPort:"مونتاج فيديو",
+      SomeVidEdit:"بعض اعمال المونتاج ",
+      OurJob:"أعمالنا تتحدث عنّا... هل ترغب في عمل مماثل؟ تواصل معنا الآن. ",
+      GraphicPort:"تصميم جرافيك",
+      SomeGraphic:"بعض أعمال تصميم الجرافيك ",
+      MotionPort:"موشن جرافيك",
+      SomeMotion:"بعض اعمال الموشن جرافيك ",
+      CusReview:"آراء العملاء",
+      Review1:"'الخدمة كانت رائعة والنتيجة أفضل من المتوقع. فريق عمل متعاون ومحترف.'",
+      CusName1:"- Mohamed Khaled",
+      Review2:"'Habix نقلوا فكرتي لواقع مرئي مدهش. أنصح بشدة!'",
+      CusName2:"- Yousef Hatem ",
+      OurCus:"عملاؤنا",
+      Cus1:"شركة Mohamed Khaled",
+      Cus1Info1:"عدد المشاركين: 100",
+      Cus1Info2:"تفاصيل التعاون: تصميم حملة إعلانية كاملة لمدة 3 شهور.",
+      Cus1Info3:"الموقع الرسمي",
+      Cus2:"مؤسسة Yousef Hatem",
+      Cus2Info1:"عدد المشاركين: 200",
+      Cus2Info2:"تفاصيل التعاون: إنتاج فيديو موشن جرافيك توضيحي لخدمة تقنية.",
+      Cus2Info3:"صفحتهم على فيسبوك",
+      Cus3:"مؤسسة Abdo Khaled",
+      Cus3Info1:"عدد المشاركين: 300",
+      Cus3Info2:"تفاصيل التعاون: عمل 100 فيديو يوتيوب.",
+      Cus3Info3:"صفحتهم على تيك توك",
+      Cus4:"مؤسسة Medo",
+      Cus4Info1:"عدد المشاركين: 400",
+      Cus4Info2:"تفاصيل التعاون:إدارة المحتوى,الحملات الإعلانية،و تصميم المنشورات لمنصات التواصل الاجتماعي.",
+      Cus4Info3:"صفحتهم على يوتيوب",
+      Cus5:"مؤسسة Abdo",
+      Cus5Info1:"عدد المشاركين: 500",
+      Cus5Info2:"تفاصيل التعاون: إنتاج فيديو موشن جرافيك توضيحي لخدمة تقنية.",
+      Cus5Info3:"صفحتهم على تويتر",
+      Ready:"جاهز تبدأ مشروعك معنا؟",
+      rights: "2025 Habix. جميع الحقوق محفوظة.",
+    }
+  };
+
+  let currentLang = localStorage.getItem('lang') || 'ar'; // التحميل التلقائي للغة
+
+  function applyTranslation() {
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (translations[currentLang][key]) {
+        el.textContent = translations[currentLang][key];
+      }
+    });
+
+    document.documentElement.lang = currentLang;
+
+    const langBtn = document.querySelector('.lang-toggle');
+    if (langBtn) {
+      langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+    }
+  }
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    localStorage.setItem('lang', currentLang);
+    applyTranslation();
+  }
+
+  // تشغيل الترجمة عند تحميل الصفحة
+  window.addEventListener('DOMContentLoaded', applyTranslation);
+</script>
+<script>
+  // شيل no-scroll بعد الأنيميشن أو اللودر
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.body.classList.remove('no-scroll');
+    }, 1200); // حسب مدة الأنيميشن عندك
+  });
+</script>
+
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+    });
+  });
+</script>
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+    });
+  });
+</script>
+<script>
+
+
+  function applyTranslation() {
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (translations[currentLang][key]) {
+        el.textContent = translations[currentLang][key];
+      }
+    });
+
+    document.documentElement.lang = currentLang;
+
+    const langBtn = document.querySelector('.lang-toggle');
+    if (langBtn) {
+      langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+    }
+  }
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    localStorage.setItem('lang', currentLang);
+    applyTranslation();
+  }
+
+  // تشغيل الترجمة عند تحميل الصفحة
+  window.addEventListener('DOMContentLoaded', applyTranslation);
+</script>
+<script>
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    });
+  });
+</script>
+
+
+
+<!-- مكتبة Bootstrap (مرة واحدة بس!) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+  crossorigin="anonymous"></script>
+
+<!-- إغلاق القائمة عند الضغط على لينك -->
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habix | Contact Us</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/habix.png" type="image/png">
+  <link rel="stylesheet" href="css/contact_style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<button class="btn btn-outline-light lang-toggle" onclick="toggleLanguage()">English</button>
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Habix Logo" width="120" height="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" data-key="homeNav" href="index.html">الصفحة الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" data-key="aboutNav" href="about_us.html">عنّا</a></li>
+        <li class="nav-item"><a class="nav-link" data-key="servicesNav" href="services.html">الخدمات</a></li>
+        <li class="nav-item"><a class="nav-link" data-key="contactNav" href="contact_us.html">تواصل معنا</a></li>
+      </ul>
+      <a class="btn btn-creative ms-3" href="https://wa.me/+201500740391" target="_blank" data-key="start">ابدأ مشروعك</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact Header -->
+<header class="contact-header text-center">
+  <div class="container">
+    <h1 class="display-4" data-key="cantactus">تواصل معنا</h1>
+    <p class="lead" data-key="cantactusinfo">نسعد دائماً بالتواصل معك في أي وقت، لأي استفسار أو شراكة أو تعاون إبداعي.</p>
+  </div>
+</header>
+
+<!-- Contact Form Section -->
+<section class="contact-form-section text-center py-5">
+  <div class="container">
+    <form action="https://formspree.io/f/xrbkobog" method="POST" class="contact-form-box">
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <input type="email" name="email" placeholder ="Enter Your Email" required>
+        </div>
+        <div class="col-md-6" >
+          <input type="text" name="name" placeholder="Enter Your Name" required>
+        </div>
+      </div>
+      <div class="mb-4" >
+        <textarea name="message" rows="5" placeholder="...Your Message" required></textarea>
+      </div>
+      <button type="submit" data-key="send" >إرسال</button>
+    </form>
+  </div>
+</section>
+
+<!-- Contact Info Boxes -->
+<section class="contact-info-boxes text-center py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="icon-circle icon-circle1"><i class="fas fa-phone"></i></div>
+        <h5 class="text-primary1" data-key="phone">رقم الهاتف</h5>
+        <p class="text-primary1"><a href="tel:+201500740391">+201500740391</a></p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="icon-circle icon-circle2"><i class="fas fa-envelope"></i></div>
+        <h5 class="text-primary2" data-key="email">البريد الإلكتروني</h5>
+        <p class="text-primary2"><a href="mailto:habix.company@gmail.com">habix.company@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4">
+  <p data-key="rights">&copy; 2025 Habix. جميع الحقوق محفوظة.</p>
+</footer>
+
+  <!-- JavaScript للترجمة -->
+<script>
+  const translations = {
+    en: {
+      homeNav: "Home",
+      aboutNav: "About Us",
+      servicesNav: "Services",
+      contactNav: "Contact Us",
+      start: "Start Your Project",
+      cantactus: "Contact us",
+      cantactusinfo: "We’re always happy to hear from you — for any inquiries, partnerships, or creative collaborations.",
+      phone: "Phone Number",
+      email: "Email Address",
+      send: "Send",
+      rights: "© 2025 Habix. All rights reserved."
+    },
+    ar: {
+      homeNav: "الصفحة الرئيسية",
+      aboutNav: "عنّا",
+      servicesNav: "الخدمات",
+      contactNav: "تواصل معنا",
+      start: "ابدأ مشروعك",
+      cantactus: "تواصل معنا",
+      cantactusinfo: "نسعد دائماً بالتواصل معك في أي وقت، لأي استفسار أو شراكة أو تعاون إبداعي.",
+      phone: "رقم الهاتف",
+      email: "البريد الإلكتروني",
+      send: "إرسال",
+      rights: "© 2025 Habix. جميع الحقوق محفوظة."
+    }
+  };
+
+  let currentLang = localStorage.getItem('lang') || 'ar'; // التحميل التلقائي للغة
+
+  function applyTranslation() {
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (translations[currentLang][key]) {
+        el.textContent = translations[currentLang][key];
+      }
+    });
+
+    document.documentElement.lang = currentLang;
+
+    const langBtn = document.querySelector('.lang-toggle');
+    if (langBtn) {
+      langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+    }
+  }
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    localStorage.setItem('lang', currentLang);
+    applyTranslation();
+  }
+
+  // تشغيل الترجمة عند تحميل الصفحة
+  window.addEventListener('DOMContentLoaded', applyTranslation);
+</script>
+<script>
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    });
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

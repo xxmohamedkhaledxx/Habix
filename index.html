@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habix | Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="icon" href="img/habix.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/about_style.css" />
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+
+</head>
+<body class="no-scroll">
+  <button class="btn btn-outline-light lang-toggle" onclick="toggleLanguage()">English</button>
+
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Habix Logo" width="120" height="50"></a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="homeNav" href="index.html">الصفحة الرئيسية</a></li>
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="aboutNav" href="about_us.html">عنّا</a></li>
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="servicesNav" href="services.html">الخدمات</a></li>
+          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="contactNav" href="contact_us.html">تواصل معنا</a></li>
+        </ul>
+        <a class="btn btn-creative ms-3" href="https://wa.me/+201500740391" target="_blank" style="font-size: 15px;" data-key="startProject">ابدأ مشروعك</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-center" style="background: linear-gradient(to bottom, #0f0f0f, #1a1a1a); padding: 150px 20px 100px; min-height: 100vh; display: flex; align-items: center;">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <div class="container">
+      <h1 class="display-4" data-aos="fade-up" data-key="welcome">مرحبًا بك في</h1>
+      <h2 class="display-4" data-aos="fade-up" style="color: #00ffd5;  font-size: 90px; font-weight: bold;">Habix</h2>
+      <p class="lead" data-aos="fade-up" data-aos-delay="200" data-key="slogan">نصنع الإبداع - ننتج التأثير - نحقق النجاح</p>
+      <a href="services.html" class="btn btn-creative mt-4" data-aos="fade-up" data-aos-delay="400" data-key="discoverServices">تعرف على خدماتنا</a>
+    </div>
+    <div id="particles-js"></div>
+  </header>
+
+  <section id="about" style="position: relative;">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up"><span style="color: #00ffd5; font-size: 80px; font-weight: bold;" data-key="aboutTitle">عنّا</span></h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="200" data-key="aboutText">
+        نحن فريق إبداعي متخصص في تقديم حلول متكاملة في التصميم الجرافيكي، الموشن جرافيك، تصوير وإنتاج الفيديو، وتصميم العروض التقديمية والفيديوهات التوضيحية. نحوّل الأفكار والرؤى إلى محتوى بصري احترافي، يلفت الانتباه ويحقق التأثير المطلوب لدى جمهورك المستهدف
+      </p>
+      <div class="text-center mt-4">
+        <a href="about_us.html" class="btn btn-outline-light">
+          <span data-key="moreAbout">المزيد عنّا</span>
+          <i class="fas fa-arrow-left"></i>
+        </a>
+      </div>
+      <img src="img/spot.png" alt="spot" class="spot1">
+      <img src="img/spot1.jpg" alt="spot" class="spot2">
+    </div>
+  </section>
+
+  <section id="services" class="bg-dark">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up" data-key="servicesTitle">خدماتنا</h2>
+      <div class="row text-center">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-4 service-box text-center position-relative" >
+            <img src="img/habix.png" alt="مونتاج" class="service-preview">
+            <i class="fas fa-film fa-2x mb-3"></i>
+            <h5 data-key="videoEditing">مونتاج الفيديو</h5>
+            <p data-key="videoEditingDesc">تحرير احترافي للفيديوهات بأسلوب عصري وسينمائي.</p>
+          </div>
+
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 service-box text-center">
+            <img src="img/habix.png" alt="تصميم جرافيك" class="service-preview">
+            <i class="fas fa-pen-nib fa-2x mb-3"></i>
+            <h5 data-key="graphicDesign"> تصميم جرافيك</h5>
+            <p data-key="graphicDesignDesc">منشورات، شعارات، بوسترات — تصميم جذاب يلفت الانتباه.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-4 service-box text-center">
+            <img src="img/habix.png" alt="موشن جرافيك" class="service-preview">
+            <i class="fas fa-video fa-2x mb-3"></i>
+            <h5 data-key="motionGraphic"> موشن جرافيك</h5>
+            <p data-key="motionGraphicDesc">أنيميشن احترافي يُبرز رسالتك بطريقة مبتكرة.</p>
+          </div>
+        </div>
+      <div class="text-center mt-4">
+        <a href="services.html" class="btn btn-outline-light" >
+          <span data-key="allServices">اكتشف جميع الخدمات </span>
+          <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="position-relative">
+    <div class="get-in-touch-bg" data-key="contactBg">YOUR STORY STARTS WITH US</div>
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up" data-key="contactTitle">تواصل معنا</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="200" data-key="contactText">نسعد دائماً بالتواصل معك لتبدأ مشروعك الإبداعي.</p>
+      <div class="text-center mt-4">
+        <a href="https://wa.me/+201500740391" class="btn btn-creative" target="_blank" data-key="contactWhatsApp">راسلنا على واتساب</a>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+        <a href="mailto:habix.company@gmail.com?subject=استفسار%20من%20الموقع" class="me-3">
+          <i id="textToCopyy" onclick="copyText()" class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.facebook.com/people/Habix/61563776978549/?rdid=KLAZdBg6fh4eyaMo&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BYbozbDQo%2F" class="me-3" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/habix_hb?utm_source=ig_web_button_share_sheet&igsh=anowcXN6eDdrOW9p" class="me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/HabixCompany?t=1TEbdNQgnX2yMhWDktZFGA&s=09" class="me-3"><i class="fab fa-twitter" target="_blank"></i></a>
+        <a href="https://www.tiktok.com/@habix.media?_t=ZS-8xHWgTYBx60&_r=1" class="me-3"><i class="fab fa-tiktok" target="_blank"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer >
+    <p data-key="rights">&copy; 2025 Habix. جميع الحقوق محفوظة.</p>
+  </footer>
+
+<script>
+  const translations = {
+    en: {
+      homeNav:"Home",
+      aboutNav: "About",
+      servicesNav: "Services",
+      contactNav: "Contact Us",
+      startProject: "Start Your Project",
+      welcome: "Welcome to",
+      slogan: "We create creativity – produce impact – achieve success",
+      discoverServices: "Discover Our Services",
+      aboutTitle: "About Us",
+      aboutText: "We are a creative team specialized in delivering integrated solutions in graphic design, motion graphics, video production, presentation design, and explainer videos. We turn ideas and visions into professional visual content that captures attention and creates the desired impact on your target audience.",
+      moreAbout: "More About Us",
+      servicesTitle: "Our Services",
+      videoEditing: "Video Editing",
+      videoEditingDesc: "Professional video editing with a modern and cinematic style.",
+      graphicDesign: "Graphic Design",
+      graphicDesignDesc: "Posts, logos, posters — attractive designs that grab attention.",
+      motionGraphic: "Motion Graphic",
+      motionGraphicDesc: "Professional animation that delivers your message creatively.",
+      allServices: "Explore All Services",
+      contactBg: "YOUR STORY STARTS WITH US",
+      contactTitle: "Contact Us",
+      contactText: "We are always happy to connect and start your creative project.",
+      contactWhatsApp: "Message us on WhatsApp",
+      rights: " 2025 Habix. All rights reserved."
+    },
+    ar: {
+      homeNav:"الصفحة الرئيسية",
+      aboutNav: "عنّا",
+      servicesNav: "الخدمات",
+      contactNav: "تواصل معنا",
+      startProject: "ابدأ مشروعك",
+      welcome: "مرحبًا بك في",
+      slogan: "نصنع الإبداع - ننتج التأثير - نحقق النجاح",
+      discoverServices: "تعرف على خدماتنا",
+      aboutTitle: "عنّا",
+      aboutText: "نحن فريق إبداعي متخصص في تقديم حلول متكاملة في التصميم الجرافيكي، الموشن جرافيك، تصوير وإنتاج الفيديو، وتصميم العروض التقديمية والفيديوهات التوضيحية. نحوّل الأفكار والرؤى إلى محتوى بصري احترافي، يلفت الانتباه ويحقق التأثير المطلوب لدى جمهورك المستهدف",
+      moreAbout: " المزيد عنّا  ",
+      servicesTitle: "خدماتنا",
+      videoEditing: "مونتاج الفيديو",
+      videoEditingDesc: "تحرير احترافي للفيديوهات بأسلوب عصري وسينمائي.",
+      graphicDesign: "تصميم جرافيك",
+      graphicDesignDesc: "منشورات، شعارات، بوسترات — تصميم جذاب يلفت الانتباه.",
+      motionGraphic: "موشن جرافيك",
+      motionGraphicDesc: "أنيميشن احترافي يُبرز رسالتك بطريقة مبتكرة.",
+      allServices: "اكتشف جميع الخدمات ",
+      contactBg: "YOUR STORY STARTS WITH US",
+      contactTitle: "تواصل معنا",
+      contactText: "نسعد دائماً بالتواصل معك لتبدأ مشروعك الإبداعي.",
+      contactWhatsApp: "راسلنا على واتساب",
+      rights: " 2025 Habix. جميع الحقوق محفوظة."
+    }
+  };
+
+  let currentLang = localStorage.getItem('lang') || 'ar'; // التحميل التلقائي للغة
+
+  function applyTranslation() {
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      if (translations[currentLang][key]) {
+        el.textContent = translations[currentLang][key];
+      }
+    });
+
+    document.documentElement.lang = currentLang;
+    const langBtn = document.querySelector('.lang-toggle');
+    if (langBtn) {
+      langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+    }
+  }
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    localStorage.setItem('lang', currentLang);
+    applyTranslation();
+  }
+
+  // تشغيل الترجمة عند تحميل الصفحة
+  window.addEventListener('DOMContentLoaded', applyTranslation);
+</script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+
+
+
+<!-- مكتبة Bootstrap (مرة واحدة بس!) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+  crossorigin="anonymous"></script>
+
+<!-- إغلاق القائمة عند الضغط على لينك -->
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        }
+      }
+    });
+  });
+</script>
+
+
+<!-- إغلاق القائمة عند الضغط على لينك -->
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        }
+      }
+    });
+  });
+</script>
+<script>
+  function copyText() {
+    const text = document.getElementById("textToCopyy").innerText;
+    navigator.clipboard.writeText(text)
+      .then(() => alert("Email copied!"))
+      .catch(() => alert("Error"));
+  }
+</script>
+
+
+</body>
+
+</html>

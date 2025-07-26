@@ -1,0 +1,120 @@
+/* الهيدر */
+.about-header {
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+  padding: 430px 80px 430px 80px ;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #00ffd5;
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 20px;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+/* الأقسام */
+.about-section {
+  padding: 100px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00ffd5;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-desc {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+  color: #ddd;
+}
+.about-header{
+  padding: 430px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* قائمة القيم */
+.values-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.values-list li {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.values-list li:hover {
+  background: rgba(0, 255, 213, 0.1);
+}
+/* شهادات العملاء */
+.testimonial {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: auto;
+  color: #ccc;
+  text-align: center;
+  font-style: italic;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 15px;
+  color: #00ffd5;
+  font-weight: bold;
+}
+
+/* الفوتر */
+footer {
+  background: #111;
+  padding: 40px 0;
+  text-align: center;
+  color: #aaa;
+}
+
+footer a {
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #00ffd5;
+}
+.social-icons i {
+  transition: transform 0.3s ease;
+}
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .about-header p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 20px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+}
