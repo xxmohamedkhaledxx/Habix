@@ -17,117 +17,201 @@
 
 </head>
 <body class="no-scroll">
-  <button class="btn btn-outline-light lang-toggle" onclick="toggleLanguage()">English</button>
 
 
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Habix Logo" width="120" height="50"></a>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="homeNav" href="index.html">الصفحة الرئيسية</a></li>
-          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="aboutNav" href="about_us.html">عنّا</a></li>
-          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="servicesNav" href="services.html">الخدمات</a></li>
-          <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="contactNav" href="contact_us.html">تواصل معنا</a></li>
-        </ul>
-        <a class="btn btn-creative ms-3" href="https://wa.me/+201500740391" target="_blank" style="font-size: 15px;" data-key="startProject">ابدأ مشروعك</a>
-      </div>
+  <!-- شاشة التحميل -->
+<div id="loading-screen">
+  <img src="img/logo.png" alt="Habix Logo" class="loading-logo">
+  <p class="loading-text">جارٍ التحميل...</p>
+</div>
+
+<style>
+  /* شاشة التحميل */
+  #loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #0f0f0f 0%, #000 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-family: "Cairo", sans-serif;
+    transition: opacity 0.6s ease;
+  }
+
+  .loading-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px #00ffd5);
+    animation: glow 2s infinite ease-in-out, float 3s ease-in-out infinite;
+  }
+
+  .loading-text {
+    margin-top: 20px;
+    color: #00ffd5;
+    font-size: 22px;
+    letter-spacing: 1px;
+    animation: fadeText 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 10px #00ffd5);
+    }
+    50% {
+      filter: drop-shadow(0 0 25px #00ffd5);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fadeText {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loading-screen");
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+      document.body.classList.remove("no-scroll");
+    }, 600);
+  });
+</script>
+
+
+
+<button class="btn btn-outline-light lang-toggle" onclick="toggleLanguage()">English</button>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Habix Logo" width="120" height="50"></a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="homeNav" href="index.html">الصفحة الرئيسية</a></li>
+        <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="aboutNav" href="about_us.html">عنّا</a></li>
+        <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="servicesNav" href="services.html">الخدمات</a></li>
+        <li class="nav-item" style="font-size: 20px;"><a class="nav-link" data-key="contactNav" href="contact_us.html">تواصل معنا</a></li>
+      </ul>
+      <a class="btn btn-creative ms-3" href="https://wa.me/+201500740391" target="_blank" style="font-size: 15px;" data-key="startProject">ابدأ مشروعك</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <header class="text-center" style="background: linear-gradient(to bottom, #0f0f0f, #1a1a1a); padding: 150px 20px 100px; min-height: 100vh; display: flex; align-items: center;">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <div class="container">
-      <h1 class="display-4" data-aos="fade-up" data-key="welcome">مرحبًا بك في</h1>
-      <h2 class="display-4" data-aos="fade-up" style="color: #00ffd5;  font-size: 90px; font-weight: bold;">Habix</h2>
-      <p class="lead" data-aos="fade-up" data-aos-delay="200" data-key="slogan">نصنع الإبداع - ننتج التأثير - نحقق النجاح</p>
-      <a href="services.html" class="btn btn-creative mt-4" data-aos="fade-up" data-aos-delay="400" data-key="discoverServices">تعرف على خدماتنا</a>
+<header class="text-center" style="background: linear-gradient(to bottom, #0f0f0f, #1a1a1a); padding: 150px 20px 100px; min-height: 100vh; display: flex; align-items: center;">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <div class="container">
+    <h1 class="display-4" data-aos="fade-up" data-key="welcome">مرحبًا بك في</h1>
+    <h2 class="display-4" data-aos="fade-up" style="color: #00ffd5;  font-size: 90px; font-weight: bold;">Habix</h2>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200" data-key="slogan">نصنع الإبداع - ننتج التأثير - نحقق النجاح</p>
+    <a href="services.html" class="btn btn-creative mt-4" data-aos="fade-up" data-aos-delay="400" data-key="discoverServices">تعرف على خدماتنا</a>
+  </div>
+  <div id="particles-js"></div>
+</header>
+
+<section id="about" style="position: relative;">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up"><span style="color: #00ffd5; font-size: 80px; font-weight: bold;" data-key="aboutTitle">عنّا</span></h2>
+    <p class="section-desc" data-aos="fade-up" data-aos-delay="200" data-key="aboutText">
+      نحن فريق إبداعي متخصص في تقديم حلول متكاملة في التصميم الجرافيكي، الموشن جرافيك، تصوير وإنتاج الفيديو، وتصميم العروض التقديمية والفيديوهات التوضيحية. نحوّل الأفكار والرؤى إلى محتوى بصري احترافي، يلفت الانتباه ويحقق التأثير المطلوب لدى جمهورك المستهدف
+    </p>
+    <div class="text-center mt-4">
+      <a href="about_us.html" class="btn btn-outline-light">
+        <span data-key="moreAbout">المزيد عنّا</span>
+        <i class="fas fa-arrow-left"></i>
+      </a>
     </div>
-    <div id="particles-js"></div>
-  </header>
+    <img src="img/spot.png" alt="spot" class="spot1">
+    <img src="img/spot1.jpg" alt="spot" class="spot2">
+  </div>
+</section>
 
-  <section id="about" style="position: relative;">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up"><span style="color: #00ffd5; font-size: 80px; font-weight: bold;" data-key="aboutTitle">عنّا</span></h2>
-      <p class="section-desc" data-aos="fade-up" data-aos-delay="200" data-key="aboutText">
-        نحن فريق إبداعي متخصص في تقديم حلول متكاملة في التصميم الجرافيكي، الموشن جرافيك، تصوير وإنتاج الفيديو، وتصميم العروض التقديمية والفيديوهات التوضيحية. نحوّل الأفكار والرؤى إلى محتوى بصري احترافي، يلفت الانتباه ويحقق التأثير المطلوب لدى جمهورك المستهدف
-      </p>
-      <div class="text-center mt-4">
-        <a href="about_us.html" class="btn btn-outline-light">
-          <span data-key="moreAbout">المزيد عنّا</span>
-          <i class="fas fa-arrow-left"></i>
-        </a>
-      </div>
-      <img src="img/spot.png" alt="spot" class="spot1">
-      <img src="img/spot1.jpg" alt="spot" class="spot2">
-    </div>
-  </section>
-
-  <section id="services" class="bg-dark">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up" data-key="servicesTitle">خدماتنا</h2>
-      <div class="row text-center">
-          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="p-4 service-box text-center position-relative" >
-            <img src="img/habix.png" alt="مونتاج" class="service-preview">
-            <i class="fas fa-film fa-2x mb-3"></i>
-            <h5 data-key="videoEditing">مونتاج الفيديو</h5>
-            <p data-key="videoEditingDesc">تحرير احترافي للفيديوهات بأسلوب عصري وسينمائي.</p>
-          </div>
-
+<section id="services" class="bg-dark">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up" data-key="servicesTitle">خدماتنا</h2>
+    <div class="row text-center">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-4 service-box text-center position-relative" >
+          <img src="img/habix.png" alt="مونتاج" class="service-preview">
+          <i class="fas fa-film fa-2x mb-3"></i>
+          <h5 data-key="videoEditing">مونتاج الفيديو</h5>
+          <p data-key="videoEditingDesc">تحرير احترافي للفيديوهات بأسلوب عصري وسينمائي.</p>
         </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-4 service-box text-center">
+          <img src="img/habix.png" alt="تصميم جرافيك" class="service-preview">
+          <i class="fas fa-pen-nib fa-2x mb-3"></i>
+          <h5 data-key="graphicDesign"> تصميم جرافيك</h5>
+          <p data-key="graphicDesignDesc">منشورات، شعارات، بوسترات — تصميم جذاب يلفت الانتباه.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="p-4 service-box text-center">
-            <img src="img/habix.png" alt="تصميم جرافيك" class="service-preview">
-            <i class="fas fa-pen-nib fa-2x mb-3"></i>
-            <h5 data-key="graphicDesign"> تصميم جرافيك</h5>
-            <p data-key="graphicDesignDesc">منشورات، شعارات، بوسترات — تصميم جذاب يلفت الانتباه.</p>
-          </div>
+          <img src="img/habix.png" alt="موشن جرافيك" class="service-preview">
+          <i class="fas fa-video fa-2x mb-3"></i>
+          <h5 data-key="motionGraphic"> موشن جرافيك</h5>
+          <p data-key="motionGraphicDesc">أنيميشن احترافي يُبرز رسالتك بطريقة مبتكرة.</p>
         </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="p-4 service-box text-center">
-            <img src="img/habix.png" alt="موشن جرافيك" class="service-preview">
-            <i class="fas fa-video fa-2x mb-3"></i>
-            <h5 data-key="motionGraphic"> موشن جرافيك</h5>
-            <p data-key="motionGraphicDesc">أنيميشن احترافي يُبرز رسالتك بطريقة مبتكرة.</p>
-          </div>
-        </div>
-      <div class="text-center mt-4">
-        <a href="services.html" class="btn btn-outline-light" >
-          <span data-key="allServices">اكتشف جميع الخدمات </span>
-          <i class="fas fa-arrow-left"></i></a>
       </div>
+    <div class="text-center mt-4">
+      <a href="services.html" class="btn btn-outline-light" >
+        <span data-key="allServices">اكتشف جميع الخدمات </span>
+        <i class="fas fa-arrow-left"></i></a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact" class="position-relative">
-    <div class="get-in-touch-bg" data-key="contactBg">YOUR STORY STARTS WITH US</div>
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up" data-key="contactTitle">تواصل معنا</h2>
-      <p class="section-desc" data-aos="fade-up" data-aos-delay="200" data-key="contactText">نسعد دائماً بالتواصل معك لتبدأ مشروعك الإبداعي.</p>
-      <div class="text-center mt-4">
-        <a href="https://wa.me/+201500740391" class="btn btn-creative" target="_blank" data-key="contactWhatsApp">راسلنا على واتساب</a>
-      </div>
+<section id="contact" class="position-relative">
+  <div class="get-in-touch-bg" data-key="contactBg"> YOUR STORY STARTS WITH US </div>
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up" data-key="contactTitle">تواصل معنا</h2>
+    <p class="section-desc" data-aos="fade-up" data-aos-delay="200" data-key="contactText">نسعد دائماً بالتواصل معك لتبدأ مشروعك الإبداعي.</p>
+    <div class="text-center mt-4">
+      <a href="https://wa.me/+201500740391" class="btn btn-creative" target="_blank" data-key="contactWhatsApp">راسلنا على واتساب</a>
     </div>
-    <div class="text-center mt-5">
-        <a href="mailto:habix.company@gmail.com?subject=استفسار%20من%20الموقع" class="me-3">
-          <i id="textToCopyy" onclick="copyText()" class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.facebook.com/people/Habix/61563776978549/?rdid=KLAZdBg6fh4eyaMo&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BYbozbDQo%2F" class="me-3" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/habix_hb?utm_source=ig_web_button_share_sheet&igsh=anowcXN6eDdrOW9p" class="me-3" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/HabixCompany?t=1TEbdNQgnX2yMhWDktZFGA&s=09" class="me-3"><i class="fab fa-twitter" target="_blank"></i></a>
-        <a href="https://www.tiktok.com/@habix.media?_t=ZS-8xHWgTYBx60&_r=1" class="me-3"><i class="fab fa-tiktok" target="_blank"></i></a>
-      </div>
+  </div>
+  <div class="text-center mt-5">
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=habix.company@gmail.com" class="me-3" target="_blank"><i class="fas fa-envelope" ></i></a>
+      <a href="https://www.facebook.com/people/Habix/61563776978549/?rdid=KLAZdBg6fh4eyaMo&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BYbozbDQo%2F" class="me-3" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/habix_hb?utm_source=ig_web_button_share_sheet&igsh=anowcXN6eDdrOW9p" class="me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/HabixCompany?t=1TEbdNQgnX2yMhWDktZFGA&s=09" class="me-3" target="_blank"><i class="fab fa-twitter" ></i></a>
+      <a href="https://www.tiktok.com/@habix.media?_t=ZS-8xHWgTYBx60&_r=1" class="me-3" target="_blank"><i class="fab fa-tiktok" ></i></a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer >
-    <p data-key="rights">&copy; 2025 Habix. جميع الحقوق محفوظة.</p>
-  </footer>
+<footer >
+  <p data-key="rights">&copy; 2025 Habix. جميع الحقوق محفوظة.</p>
+</footer>
 
 <script>
   const translations = {
@@ -151,7 +235,6 @@
       motionGraphic: "Motion Graphic",
       motionGraphicDesc: "Professional animation that delivers your message creatively.",
       allServices: "Explore All Services",
-      contactBg: "YOUR STORY STARTS WITH US",
       contactTitle: "Contact Us",
       contactText: "We are always happy to connect and start your creative project.",
       contactWhatsApp: "Message us on WhatsApp",
@@ -177,7 +260,6 @@
       motionGraphic: "موشن جرافيك",
       motionGraphicDesc: "أنيميشن احترافي يُبرز رسالتك بطريقة مبتكرة.",
       allServices: "اكتشف جميع الخدمات ",
-      contactBg: "YOUR STORY STARTS WITH US",
       contactTitle: "تواصل معنا",
       contactText: "نسعد دائماً بالتواصل معك لتبدأ مشروعك الإبداعي.",
       contactWhatsApp: "راسلنا على واتساب",
@@ -185,40 +267,40 @@
     }
   };
 
-  let currentLang = localStorage.getItem('lang') || 'ar'; // التحميل التلقائي للغة
+let currentLang = localStorage.getItem('lang') || 'ar'; // التحميل التلقائي للغة
 
-  function applyTranslation() {
-    document.querySelectorAll('[data-key]').forEach(el => {
-      const key = el.getAttribute('data-key');
-      if (translations[currentLang][key]) {
-        el.textContent = translations[currentLang][key];
-      }
-    });
-
-    document.documentElement.lang = currentLang;
-    const langBtn = document.querySelector('.lang-toggle');
-    if (langBtn) {
-      langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+function applyTranslation() {
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    if (translations[currentLang][key]) {
+      el.textContent = translations[currentLang][key];
     }
-  }
+  });
 
-  function toggleLanguage() {
-    currentLang = currentLang === 'ar' ? 'en' : 'ar';
-    localStorage.setItem('lang', currentLang);
-    applyTranslation();
+  document.documentElement.lang = currentLang;
+  const langBtn = document.querySelector('.lang-toggle');
+  if (langBtn) {
+    langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
   }
+}
 
-  // تشغيل الترجمة عند تحميل الصفحة
-  window.addEventListener('DOMContentLoaded', applyTranslation);
+function toggleLanguage() {
+  currentLang = currentLang === 'ar' ? 'en' : 'ar';
+  localStorage.setItem('lang', currentLang);
+  applyTranslation();
+}
+
+// تشغيل الترجمة عند تحميل الصفحة
+window.addEventListener('DOMContentLoaded', applyTranslation);
 </script>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 
 
 
@@ -258,16 +340,7 @@
     });
   });
 </script>
-<script>
-  function copyText() {
-    const text = document.getElementById("textToCopyy").innerText;
-    navigator.clipboard.writeText(text)
-      .then(() => alert("Email copied!"))
-      .catch(() => alert("Error"));
-  }
-</script>
-  
-<script src="//code.tidio.co/zdiazvo3bccbcrjc0nu0xpgjuk7tv6ws.js"></script>
+<script src="//code.tidio.co/zdiazvo3bccbcrjc0nu0xpgjuk7tv6ws.js" async></script>
 
 </body>
 
