@@ -14,6 +14,91 @@
 </head>
 <body>
 
+
+  <!-- شاشة التحميل -->
+<div id="loading-screen">
+  <img src="img/logo.png" alt="Habix Logo" class="loading-logo">
+  <p class="loading-text">جارٍ التحميل...</p>
+</div>
+
+<style>
+  /* شاشة التحميل */
+  #loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #0f0f0f 0%, #000 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-family: "Cairo", sans-serif;
+    transition: opacity 0.6s ease;
+  }
+
+  .loading-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px #00ffd5);
+    animation: glow 2s infinite ease-in-out, float 3s ease-in-out infinite;
+  }
+
+  .loading-text {
+    margin-top: 20px;
+    color: #00ffd5;
+    font-size: 22px;
+    letter-spacing: 1px;
+    animation: fadeText 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 10px #00ffd5);
+    }
+    50% {
+      filter: drop-shadow(0 0 25px #00ffd5);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fadeText {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loading-screen");
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+      document.body.classList.remove("no-scroll");
+    }, 600);
+  });
+</script>
+
+
 <!-- Navbar -->
 <button class="btn btn-outline-light lang-toggle" onclick="toggleLanguage()">English</button>
 
@@ -44,26 +129,32 @@
   </div>
 </header>
 
-<!-- Contact Form Section -->
+<!-- Contact Form Section-->
 <section class="contact-form-section text-center py-5">
   <div class="container">
-    <form action="https://formspree.io/f/xrbkobog" method="POST" class="contact-form-box">
+    <form action="https://formspree.io/f/xrbkobog" method="POST" class="contact-form-box" id="contact-form">
       <div class="row mb-4">
         <div class="col-md-6">
-          <input type="email" name="email" placeholder ="Enter Your Email" required>
+          <input type="email" name="email" placeholder="Enter Your Email" required>
         </div>
-        <div class="col-md-6" >
+        <div class="col-md-6">
           <input type="text" name="name" placeholder="Enter Your Name" required>
         </div>
       </div>
-      <div class="mb-4" >
+      <div class="mb-4">
         <textarea name="message" rows="5" placeholder="...Your Message" required></textarea>
       </div>
-      <button type="submit" data-key="send" >إرسال</button>
+
+      <!-- إخفاء الكابتشا -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- عدم التحويل لصفحة جديدة -->
+      <input type="hidden" name="_next" value="">
+
+      <button type="submit" data-key="send">إرسال</button>
+      <p id="form-message" style="margin-top: 15px; color: green; display: none;">✅ Message received. Our team will contact you soon.</p>
     </form>
   </div>
 </section>
-
 <!-- Contact Info Boxes -->
 <section class="contact-info-boxes text-center py-5">
   <div class="container">
@@ -76,7 +167,7 @@
       <div class="col-md-4 mb-4">
         <div class="icon-circle icon-circle2"><i class="fas fa-envelope"></i></div>
         <h5 class="text-primary2" data-key="email">البريد الإلكتروني</h5>
-        <p class="text-primary2"><a href="mailto:habix.company@gmail.com">habix.company@gmail.com</a></p>
+        <a class="text-primary2" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=habix.company@gmail.com" class="me-3" target="_blank">habix.company@gmail.com</a>
       </div>
     </div>
   </div>
@@ -172,5 +263,37 @@
   });
 </script>
 
+
+<script>
+  const form = document.getElementById('contact-form');
+  const message = document.getElementById('form-message');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // منع الإرسال المؤقت
+
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        message.style.display = 'block';
+        form.reset();
+      } else {
+        message.style.display = 'block';
+        message.style.color = 'red';
+        message.textContent = 'حدث خطأ أثناء الإرسال، حاول مرة أخرى.';
+      }
+    }).catch(error => {
+      message.style.display = 'block';
+      message.style.color = 'red';
+      message.textContent = 'حدث خطأ أثناء الإرسال.';
+    });
+  });
+</script>
+<script src="//code.tidio.co/zdiazvo3bccbcrjc0nu0xpgjuk7tv6ws.js" async></script>
 </body>
 </html>
