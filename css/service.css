@@ -189,7 +189,9 @@ section {
   background-color: #00ffd5;
   border-radius: 30px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
+
 .mt-3:hover {
   color: #00ffd5 !important;
   background-color: #000000 !important;
@@ -204,11 +206,40 @@ section {
   margin-right: 0%;
 }
 .fa-bullhorn:before {
-    content: "\f0a1";
-    margin-right: -90% !important;
+  content: "\f0a1";
+  margin-right: -90% !important;
 }
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: var(--bs-modal-padding);
+  padding: 0 !important;
+}
+
+.smallpic{
+  width: 350px;
+  height: 400px;
+  margin: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
 }
 .fa-bullhorn:before {
-    content: "\f0a1";
-    margin-right: -250%;
+  content: "\f0a1";
+  margin-right: -250%;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: var(--bs-modal-padding);
+}
+audio {
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto;
+  display: block;
+  filter: drop-shadow(5px 5px 5px #00ffd5ad);
+  margin-bottom: 20px;
 }
