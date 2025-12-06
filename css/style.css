@@ -51,6 +51,8 @@ header .container {
   margin: auto;
   position: relative;
   top: 20px;
+  padding-bottom: 5px;
+
   
 }
 
@@ -133,12 +135,9 @@ section {
     position: fixed;
     top: 100px;
     left: 10px;
-    z-index: 10000;
+    z-index: 100;
   }
 
-  .get-in-touch-bg {
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
@@ -196,6 +195,7 @@ section {
 
   .service-box{
     margin-right: 10px;
+    margin-top: -20px;
   }
 }
 
