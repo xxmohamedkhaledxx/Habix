@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Habix | خدماتنا</title>
+  <title>Habix | Our Services</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
@@ -14,6 +14,91 @@
 
 </head>
 <body>
+
+
+  <!-- شاشة التحميل -->
+<div id="loading-screen">
+  <img src="img/logo.png" alt="Habix Logo" class="loading-logo">
+  <p class="loading-text">جارٍ التحميل...</p>
+</div>
+
+<style>
+  /* شاشة التحميل */
+  #loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #0f0f0f 0%, #000 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-family: "Cairo", sans-serif;
+    transition: opacity 0.6s ease;
+  }
+
+  .loading-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px #00ffd5);
+    animation: glow 2s infinite ease-in-out, float 3s ease-in-out infinite;
+  }
+
+  .loading-text {
+    margin-top: 20px;
+    color: #00ffd5;
+    font-size: 22px;
+    letter-spacing: 1px;
+    animation: fadeText 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 10px #00ffd5);
+    }
+    50% {
+      filter: drop-shadow(0 0 25px #00ffd5);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fadeText {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loading-screen");
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+      document.body.classList.remove("no-scroll");
+    }, 600);
+  });
+</script>
+
 
     <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
@@ -72,9 +157,9 @@
       <div class="col-md-4">
         <div class="service-box  text-center">
           <i class="fas fa-photo-video fa-2x mb-3"></i>
-          <h4 data-key="VidProduction">إنتاج فيديو</h4>
-          <p class="pp1" data-key="VidProductionTitle">تصوير احترافي للمشاريع والفعاليات مع مونتاج عالي الجودة.</p>
-         <!-- <a class="btn btn-service mt-3"  alt="إنتاج فيديو" data-bs-toggle="modal" data-bs-target="#" data-key="KnowMore">اعرف المزيد</a> -->
+          <h4 data-key="VidProduction">إدارة الصفحات</h4>
+          <p class="pp1" data-key="VidProductionTitle">ندير صفحاتك باحتراف ونبني تفاعل حقيقي مع جمهورك.</p>
+         <!-- <a class="btn btn-service mt-3"  alt="إدارة الصفحات" data-bs-toggle="modal" data-bs-target="#" data-key="KnowMore">اعرف المزيد</a> -->
         </div>
       </div>
       <!--  
@@ -90,9 +175,9 @@
       <div class="col-md-4 voiceover1">
         <div class="service-box text-center voiceover1">
           <i class="fas fa-bullhorn fa-2x mb-3 voiceover1"></i>
-          <h4 data-key="SocialMedia">خدمات سوشيال ميديا</h4>
-          <p data-key="SocialMediaTitle">إدارة المحتوى، الحملات الإعلانية، وتصميم المنشورات لمنصات التواصل الاجتماعي. </p>
-         <!-- <a class="btn btn-service mt-3"  alt="خدمات سوشيال ميديا" data-bs-toggle="modal" data-bs-target="#" data-key="KnowMore">اعرف المزيد</a> -->
+          <h4 data-key="SocialMedia">التعليق الصوتي</h4>
+          <p data-key="SocialMediaTitle">نوصل رسالتك بصوت احترافي يجذب الانتباه ويترك أثرًا </p>
+         <a class="btn btn-service mt-3"  alt="التعليق الصوتي" data-bs-toggle="modal" data-bs-target="#voiceov" data-key="KnowMore">اعرف المزيد</a> 
         </div>
       </div>
     </div>
@@ -114,32 +199,30 @@
           <video src="img/edit4.mp4"  class="smallpic" controls></video>
           <video src="img/edit5.mp4"  class="smallpic" controls></video>
           <video src="img/edit6.mp4"  class="smallpic" controls></video>
-          <video src="img/edit7.mp4"  class="smallpic" controls></video>
-          <video src="img/edit8.mp4"  class="smallpic" controls></video>
-        </div>
+       </div>
       </div>
     </div>
   </div>
-  <!--
-    <div class="modal fade" id="graphic" tabindex="-1" aria-hidden="true">
+  
+    <div class="modal fade" id="voiceov" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header border-0">
-          <h5 class="modal-title" data-key="GraphicPort">تصميم جرافيك </h5>
+          <h5 class="modal-title" data-key="GraphicPort">التعليق الصوتي</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p data-key="SomeGraphic">بعض اعمال تصميم الجرافيك </p>
+          <p data-key="SomeGraphic">بعض اعمال التعليق الصوتي </p>
           <p data-key="OurJob"> أعمالنا تتحدث عنّا... هل ترغب في عمل مماثل؟ تواصل معنا الآن. </p>
-          <video src="img/graphic1.mp4"  class="smallpic" controls></video>
-          <video src="img/graphic2.mp4"  class="smallpic" controls></video>
-          <video src="img/graphic3.mp4"  class="smallpic" controls></video>
-          <video src="img/graphic4.mp4"  class="smallpic" controls></video>
+          <audio controls><source src="img/voice_over_1.aac" type="audio/aac"></audio>
+          <audio controls><source src="img/voice_over_2.wav" type="audio/wav"></audio>
+          <audio controls><source src="img/voice_over_3.aac" type="audio/aac"></audio>
+          <audio controls><source src="img/voice_over_4.mp3" type="audio/mp3"></audio>
         </div>
       </div>
     </div>
   </div>
-  -->
+  
     <div class="modal fade" id="motion" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content bg-dark text-white">
@@ -152,6 +235,9 @@
           <p data-key="OurJob"> أعمالنا تتحدث عنّا... هل ترغب في عمل مماثل؟ تواصل معنا الآن. </p>
           <video src="img/motion1.mp4"  class="smallpic" controls></video>
           <video src="img/motion2.mp4"  class="smallpic" controls></video>
+          <video src="img/motion3.mp4"  class="smallpic" controls></video>
+          <video src="img/motion4.mp4"  class="smallpic" controls></video>
+          <video src="img/motion5.mp4"  class="smallpic" controls></video>
         </div>
       </div>
     </div>
@@ -230,36 +316,10 @@
       VidEditPort: "Video Editing",
       SomeVidEdit: "Some of our video editing work",
       OurJob: "Our work speaks for itself... Want something similar? Contact us now.",
-      GraphicPort: "Graphic Design",
-      SomeGraphic: "Some of our graphic design work",
+      GraphicPort: "Voice Over",
+      SomeGraphic: "Some of our Voice Over work",
       MotionPort: "Motion Graphics",
       SomeMotion: "Some of our motion graphics work",
-      CusReview: "Customer Reviews",
-      Review1: "'The service was amazing and the result exceeded expectations. A cooperative and professional team.'",
-      CusName1: "- Mohamed Khaled",
-      Review2: "'Habix brought my idea to life in an impressive visual way. Highly recommended!'",
-      CusName2: "- Yousef Hatem",
-      OurCus: "Our Clients",
-      Cus1: "Mohamed Khaled Company",
-      Cus1Info1: "Subscribers: 100",
-      Cus1Info2: "Project details: Full advertising campaign design for 3 months.",
-      Cus1Info3: "Official Website",
-      Cus2: "Yousef Hatem Foundation",
-      Cus2Info1: "Subscribers: 200",
-      Cus2Info2: "Project details: Motion graphics video production for a tech service.",
-      Cus2Info3: "Facebook Page",
-      Cus3: "Abdo Khaled Foundation",
-      Cus3Info1: "Subscribers: 300",
-      Cus3Info2: "Project details: Created 100 YouTube videos.",
-      Cus3Info3: "TikTok Page",
-      Cus4: "Medo Foundation",
-      Cus4Info1: "Subscribers: 400",
-      Cus4Info2: "Project details: Content management, ad campaigns, and post design for social media platforms.",
-      Cus4Info3: "YouTube Page",
-      Cus5: "Abdo Foundation",
-      Cus5Info1: "Subscribers: 500",
-      Cus5Info2: "Project details: Motion graphics video production for a tech service.",
-      Cus5Info3: "Twitter Page",
       Ready: "? Ready to start your project with us",
       rights: " 2025 Habix. All rights reserved.",
 
@@ -290,36 +350,10 @@
       VidEditPort:"مونتاج فيديو",
       SomeVidEdit:"بعض اعمال المونتاج ",
       OurJob:"أعمالنا تتحدث عنّا... هل ترغب في عمل مماثل؟ تواصل معنا الآن. ",
-      GraphicPort:"تصميم جرافيك",
-      SomeGraphic:"بعض أعمال تصميم الجرافيك ",
+      GraphicPort:"التعليق الصوتي",
+      SomeGraphic:"بعض أعمال التعليق الصوتي ",
       MotionPort:"موشن جرافيك",
       SomeMotion:"بعض اعمال الموشن جرافيك ",
-      CusReview:"آراء العملاء",
-      Review1:"'الخدمة كانت رائعة والنتيجة أفضل من المتوقع. فريق عمل متعاون ومحترف.'",
-      CusName1:"- Mohamed Khaled",
-      Review2:"'Habix نقلوا فكرتي لواقع مرئي مدهش. أنصح بشدة!'",
-      CusName2:"- Yousef Hatem ",
-      OurCus:"عملاؤنا",
-      Cus1:"شركة Mohamed Khaled",
-      Cus1Info1:"عدد المشاركين: 100",
-      Cus1Info2:"تفاصيل التعاون: تصميم حملة إعلانية كاملة لمدة 3 شهور.",
-      Cus1Info3:"الموقع الرسمي",
-      Cus2:"مؤسسة Yousef Hatem",
-      Cus2Info1:"عدد المشاركين: 200",
-      Cus2Info2:"تفاصيل التعاون: إنتاج فيديو موشن جرافيك توضيحي لخدمة تقنية.",
-      Cus2Info3:"صفحتهم على فيسبوك",
-      Cus3:"مؤسسة Abdo Khaled",
-      Cus3Info1:"عدد المشاركين: 300",
-      Cus3Info2:"تفاصيل التعاون: عمل 100 فيديو يوتيوب.",
-      Cus3Info3:"صفحتهم على تيك توك",
-      Cus4:"مؤسسة Medo",
-      Cus4Info1:"عدد المشاركين: 400",
-      Cus4Info2:"تفاصيل التعاون:إدارة المحتوى,الحملات الإعلانية،و تصميم المنشورات لمنصات التواصل الاجتماعي.",
-      Cus4Info3:"صفحتهم على يوتيوب",
-      Cus5:"مؤسسة Abdo",
-      Cus5Info1:"عدد المشاركين: 500",
-      Cus5Info2:"تفاصيل التعاون: إنتاج فيديو موشن جرافيك توضيحي لخدمة تقنية.",
-      Cus5Info3:"صفحتهم على تويتر",
       Ready:"جاهز تبدأ مشروعك معنا؟",
       rights: "2025 Habix. جميع الحقوق محفوظة.",
     }
@@ -444,6 +478,8 @@
     });
   });
 </script>
+<script src="//code.tidio.co/zdiazvo3bccbcrjc0nu0xpgjuk7tv6ws.js" async></script>
 
 </body>
 </html>
+
